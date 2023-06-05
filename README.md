@@ -2,6 +2,8 @@
 
 A collection of [conda plugins](https://docs.conda.io/projects/conda/en/latest/dev-guide/plugins/index.html).
 
+To learn about how to implement your own custom plugins, check out our [tutorial template repo](https://github.com/conda/conda-plugin-template).
+
 ## Plugins List
 
 <!-- PLUGIN_LIST -->
