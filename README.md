@@ -13,7 +13,6 @@ To learn about how to implement your own custom plugins, check out our [tutorial
 | [🏠](https://github.com/conda-incubator/conda-auth) | [⬇️](https://anaconda.org/conda-forge/conda-auth) | `conda-auth` | [![release][auth-shield]][auth-releases] | A conda plugin for handling authenticated access to private channels. | [@conda-incubator/conda-auth][auth-contributors] |
 | [🏠](https://github.com/conda/conda-lock) | [⬇️](https://anaconda.org/conda-forge/conda-lock) | `conda-lock` | [![release][lock-shield]][lock-releases] | Generates fully-reproducible lock files for conda environments. | [@conda/conda-lock][lock-contributors] |
 | [🏠](https://github.com/conda-incubator/conda-protect) | [⬇️](https://anaconda.org/conda-forge/conda-protect) | `conda-protect` | [![release][protect-shield]][protect-releases] | Protects conda environments to avoid mistakenly modifying them; utilizes the [pre-command plugin hook][pre/post-command blog post]. | [@conda-incubator/conda-protect][protect-contributors] |
-| [🏠](https://github.com/conda/constructor) | [⬇️](https://anaconda.org/anaconda/constructor) | `constructor` | [![release][contructor-shield]][constructor-releases] | A tool which allows for the construction of an installer for a collection of conda packages. | [@conda/constructor][constructor-contributors] |
 <!-- PLUGIN_LIST -->
 
 [libmamba-shield]: https://img.shields.io/github/release/conda/conda-libmamba-solver.svg
@@ -33,7 +32,3 @@ To learn about how to implement your own custom plugins, check out our [tutorial
 [protect-releases]: https://github.com/conda-incubator/conda-protect/releases
 [protect-contributors]: https://github.com/conda-incubator/conda-protect/graphs/contributors
 [pre/post-command blog post]: https://conda.org/blog/2023-07-31-latest-conda-release-includes-new-plugin-hooks#conda-protect-and-the-pre-command-hook
-
-[contructor-shield]: https://img.shields.io/github/release/conda/constructor.svg
-[constructor-releases]: https://github.com/conda/constructor/releases
-[constructor-contributors]: https://github.com/conda/constructor/graphs/contributors
