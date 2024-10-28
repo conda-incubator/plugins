@@ -36,14 +36,36 @@ def results(search_results):
             plugin["name"] = name
         if description := toml.get("project", {}).get("description"):
             plugin["description"] = description
+        print("Processed", result.repository.full_name, file=sys.stderr)
         yield plugin
 
 
+def plugin_list():
+    lines = [
+        "| &nbsp; | Name | Description | ⭐ |",
+    ]
+    for r in sorted(results(search_github()), key=lambda r: (-r["stars"], r["name"])):
+        lines.append(f"| [🏠]({r["repo_url"]}) | {r["name"]} | {r["description"]} | {r["stars"]} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def rerender(path):
+    lines = []
+    with open(path) as f:
+        keep_line = True
+        for line in f:
+            if line.strip() == "<!-- PLUGIN_LIST -->":
+                keep_line = not keep_line
+                lines.append(line)
+                if not keep_line:
+                    lines.append("RERENDER_PLACEHOLDER\n")
+                continue
+            if keep_line:
+                lines.append(line)
+                
+    return "".join(lines).replace("RERENDER_PLACEHOLDER", plugin_list())
+
+
 if __name__ == "__main__":
-    for i, r in enumerate(results(search_github())):
-        print(f"# {i}. {r['name']} {r["stars"]}⭐")
-        print(f"🏠 {r["repo_url"]}")
-        if "docs" in r:
-            print(f"📃 {r["docs"]}")
-        print(r["description"])
-        print()
+    print(rerender(sys.argv[1]))
