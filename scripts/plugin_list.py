@@ -68,4 +68,6 @@ def rerender(path):
 
 
 if __name__ == "__main__":
-    print(rerender(sys.argv[1]))
+    new_content = rerender(sys.argv[1])
+    with open(sys.argv[1], "w") as f:
+        f.write(new_content)

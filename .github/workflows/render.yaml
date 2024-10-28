@@ -22,7 +22,7 @@ jobs:
       - name: Setup dependencies
         run: python -m pip install -r scripts/requirements.txt
       - name: Rerender README
-        run: python scripts/plugin_list.py README.md > README.md
+        run: python scripts/plugin_list.py README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Preview changes
