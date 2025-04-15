@@ -42,7 +42,8 @@ def results(search_results):
 
 def plugin_list():
     lines = [
-        "| &nbsp; | Name | Description | ⭐ |",
+        "| 🔗 | Name | Description | ⭐ |",
+        "|---|------|-------------|--:|",
     ]
     for r in sorted(results(search_github()), key=lambda r: (-r["stars"], r["name"])):
         lines.append(f"| [🏠]({r["repo_url"]}) | {r["name"]} | {r["description"]} | {r["stars"]} |")

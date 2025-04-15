@@ -7,7 +7,8 @@ To learn about how to implement your own custom plugins, check out our [tutorial
 ## Plugins List
 
 <!-- PLUGIN_LIST -->
-| &nbsp; | Name | Description | ⭐ |
+| 🔗 | Name | Description | ⭐ |
+|---|------|-------------|--:|
 | [🏠](https://github.com/conda/conda-build) | conda-build | tools for building conda packages | 392 |
 | [🏠](https://github.com/conda/conda-libmamba-solver) | conda-libmamba-solver | The fast mamba solver, now in conda | 216 |
 | [🏠](https://github.com/conda-incubator/conda-pypi) | conda-pypi | Better PyPI interoperability for the conda ecosystem. | 17 |
