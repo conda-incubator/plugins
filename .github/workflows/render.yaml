@@ -3,7 +3,7 @@ name: Render
 on:
   workflow_dispatch: null
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 6 * * 1'  # Mondays at 6am
   pull_request: null
 
 concurrency: render
